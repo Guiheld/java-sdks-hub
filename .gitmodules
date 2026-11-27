@@ -1,0 +1,6 @@
+[submodule "pncp"]
+	path = pncp
+	url = https://github.com/Guiheld/PNCP-JAVA-SDK.git
+[submodule "bcb"]
+	path = bcb
+	url = https://github.com/Guiheld/BCB-DADOS-JAVA-SDK.git
