@@ -1,0 +1,64 @@
+name: "📦 Proposta de nova SDK"
+description: "Propor uma nova SDK Java para uma API pública brasileira"
+title: "NOME-JAVA-SDK"
+labels: ["java-sdk"]
+body:
+  - type: input
+    id: api
+    attributes:
+      label: "API oficial"
+      description: "URL da documentação oficial da API"
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: textarea
+    id: resumo
+    attributes:
+      label: "Resumo"
+      description: "O que a SDK cobre, em 1–2 frases"
+    validations:
+      required: true
+  - type: dropdown
+    id: demanda
+    attributes:
+      label: "Demanda"
+      options: ["Altíssima", "Alta", "Média", "Baixa"]
+    validations:
+      required: true
+  - type: dropdown
+    id: gap
+    attributes:
+      label: "Gap Java"
+      description: "Já existe lib Java (oficial ou não-oficial)?"
+      options:
+        - "Limpo (nenhuma)"
+        - "Parcial (existe, mas velha/limitada)"
+        - "Ocupado (já bem servido)"
+    validations:
+      required: true
+  - type: dropdown
+    id: auth
+    attributes:
+      label: "Autenticação"
+      options: ["Nenhuma", "Chave de API", "OAuth", "Outra"]
+    validations:
+      required: true
+  - type: textarea
+    id: escopo
+    attributes:
+      label: "Escopo inicial"
+      description: "Domínios/endpoints principais e o que entra no 0.1.0"
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Checklist de implementação"
+      options:
+        - label: "Mapear a API (endpoints, datas, erros, limites, paginação)"
+        - label: "Scaffold do reator (parent + core + spring-boot-starter)"
+        - label: "Core (config/builder, cliente, transporte resiliente, modelos, enums, exceções, paginação)"
+        - label: "Spring Boot starter (auto-config + properties + customizer)"
+        - label: "Build/publicação (GPG, central-publishing, CI, release seletivo)"
+        - label: "Docs (README + wiki + CHANGELOG + examples)"
+        - label: "Release 0.1.0"
